@@ -1,5 +1,6 @@
 #!/usr/bin/node
 
+// A script for arguments
 const { argv } = require('process');
 
 if (argv.length <= 2) {
