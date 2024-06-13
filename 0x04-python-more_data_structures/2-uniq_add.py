@@ -4,4 +4,4 @@ def uniq_add(my_list=[]):
     result = 0
     for i in unique_elements:
         result = i + result
-        return (result)
+        print(f"Result: {result}")
