@@ -1,7 +1,4 @@
-#!/usr/bin/python3
 class Square:
-    """Class Square that defines a square.
-    """
-    pass
-
-if __name__ == "__main__":
+    """An empty class of a square"""
+    def __init__(self) -> None:
+        pass
