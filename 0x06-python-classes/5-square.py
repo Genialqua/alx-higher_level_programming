@@ -6,27 +6,23 @@ class Square:
     """A class that defines a square"""
 
     def __init__(self, size=0):
-        if isinstance(size, int):
-            self.__size = size
-        else:
-            raise TypeError("size must be an integer")
-        if size < 0:
-            raise ValueError("size must be >= 0")
+        self.size = size  # Use property setter to validate and set size
 
     def area(self):
         """Calculate the area of the square"""
         return self.size ** 2
 
+    def my_print(self):
+        """Print the square using '#'"""
+        for _ in range(self.size):
+            if self.size > 0:
+                print('#' * self.size)
+            else:
+                print()
+
     def get_size(self):
         """Getter method to retrieve the size of the square"""
         return self.__size
-
-    def my_print(self):
-        for i in range(self.size):
-            if self.size == 0:
-                print()
-            else:
-                print('#'*self.size)
 
     def set_size(self, value):
         """Setter method to set the size of the square"""
