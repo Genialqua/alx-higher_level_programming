@@ -46,10 +46,20 @@ class Rectangle:
             return 0
         return 2 * (self.__width + self.__height)
 
-    def my_rectangle(self):
-        """Defining a method to print a rectangle"""
-        if self.__width == 0 or self.__height == 0:
-            print("")
-            return
-        for i in range(self.__height):
-            print("#" * self.__width)
+    def __str__(self):
+        """ Method that returns the Rectangle #
+
+        Returns:
+            str of the rectangle
+
+        """
+
+        rectangle = ""
+
+        if self.width == 0 or self.height == 0:
+            return rectangle
+
+        for i in range(self.height):
+            rectangle += ("#" * self.width) + "\n"
+
+        return rectangle[:-1]
